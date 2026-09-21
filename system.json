@@ -1,5 +1,5 @@
 {
-    "id": "world-wide-wreslting-2e",
+    "id": "world-wide-wrestling-2e",
     "title": "World Wide Wrestling",
     "description": "TKTK",
     "version": "0.0.1",
@@ -13,7 +13,7 @@
         "email": "dan@theconley.club",
         "discord": "sigafoos"
     }],
-    "esmodules": [],
+    "esmodules": ["www-2e.mjs"],
     "styles": [],
     "packs": [],
     "languages": [{
@@ -22,9 +22,5 @@
         "path": "lang/en.json"
     }],
     "documentTypes": {
-    },
-    "socket": false,
-    "url": "https://your/hosted/system/repo/",
-    "manifest": "https://your/hosted/system/repo/system.json",
-    "download": "https://your/packaged/download/archive.zip"
+    }
 }
