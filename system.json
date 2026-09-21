@@ -22,5 +22,12 @@
         "path": "lang/en.json"
     }],
     "documentTypes": {
+        "Actor": {
+            "wrestler": {
+                "filePathFields": {
+                    "picture": ["IMAGE"]
+                }
+            }
+        }
     }
 }
