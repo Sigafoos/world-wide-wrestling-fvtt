@@ -1,10 +1,11 @@
-import { PlayerActor } from "./module/documents.mjs";
+import { PlayerActor, MoveItem } from "./module/documents.mjs";
 import { WrestlerData, MoveData, GimmickData } from "./module/data-models.mjs";
 import { WrestlerSheet, MoveSheet, GimmickSheet } from "./module/sheets.mjs";
 
 Hooks.once("init", () => {
 	// this will allow NPWs and PWs to have the same behavior. we'll see if it's needed.
 	CONFIG.Actor.documentClass = PlayerActor;
+	CONFIG.Item.documentClass = MoveItem; // also applies to gimmicks I guess
 
 	CONFIG.Actor.dataModels.wrestler = WrestlerData;
 	CONFIG.Item.dataModels.move = MoveData;
@@ -39,9 +40,9 @@ Hooks.on("preCreateItem", (item, data, options, userId) => {
 		return;
 
 	const existingGimmick = parent.items.find(i => i.type === "gimmick");
-	if (existing)
+	if (existingGimmick)
 	{
-		existing.delete(); // get rid of the old one
+		existingGimmick.delete(); // get rid of the old one
 		// TODO probably get rid of the moves and stuff?
 	}
 });

@@ -8,7 +8,16 @@ export class WrestlerSheet extends foundry.appv1.sheets.ActorSheet {
 			height: 600
 		});
 	}
+
 	get template() {
 		return `systems/${game.system.id}/templates/actor/wrestler-sheet.hbs`;
+	}
+
+	async getData(options) {
+		const context = await super.getData(options);
+
+		context.moves = this.actor.items.filter(i => i.type === "move");
+
+		return context;
 	}
 }

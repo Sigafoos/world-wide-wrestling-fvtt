@@ -5,22 +5,78 @@
 				<div class="cell cell--image">
 					<img class="profile-img" src="{{actor.img}}" data-edit="img" />
 				</div>
-				<input class="input--title" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+				<div class="cell">
+					<input class="input--title" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+
+					<div>
+						<label for="hailingFrom">{{localize "WWW.Sheet.HailingFrom"}}</label>
+						<input type="text" name="system.hailingFrom" id="hailingFrom" value="{{actor.system.hailingFrom}}">
+					</div>
+					<div>
+						<label for="generalLook">{{localize "WWW.Sheet.GeneralLook"}}</label>
+						<input type="text" name="system.generalLook" id="generalLook" value="{{actor.system.generalLook}}">
+					</div>
+					<div>
+						<label for="entrance">{{localize "WWW.Sheet.Entrance"}}</label>
+						<textarea name="system.entrance" id="entrance">{{actor.system.entrance}}</textarea>
+					</div>
+				</div>
 			</div>
 		</div>
+		<fieldset>
+			<legend>{{localize "WWW.Sheet.Stats"}}</legend>
+			<div class="flexrow">
+				<div class="cell cell--input readonly">
+					<p>{{localize "WWW.Stats.Body"}}</p>
+					<p>{{actor.system.body}}</p>
+				</div>
+				<div class="cell cell--input readonly">
+					<p>{{localize "WWW.Stats.Look"}}</p>
+					<p>{{actor.system.look}}</p>
+				</div>
+				<div class="cell cell--input readonly">
+					<p>{{localize "WWW.Stats.Real"}}</p>
+					<p>{{actor.system.real}}</p>
+				</div>
+				<div class="cell cell--input readonly">
+					<p>{{localize "WWW.Stats.Work"}}</p>
+					<p>{{actor.system.work}}</p>
+				</div>
+			</div>
+		</fieldset>
 
-		<div class="cell cell--input">
-			<label for="hailingFrom">{{localize "WWW.Sheet.HailingFrom"}}</label>
-			<input type="text" name="system.hailingFrom" id="hailingFrom" value="{{actor.system.hailingFrom}}">
+		<div>
+			<h2>{{localize "WWW.Gimmick.Header"}}</h2>
+			{{#if actor.system.gimmick}}
+				<h3>{{actor.system.gimmick.name}}</h3>
+
+				<p>{{actor.system.gimmick.system.description}}</p>
+
+				<div class="flexrow">
+					<div class="cell">
+						<h4>{{localize "WWW.Sheet.Wants"}}</h4>
+						<ul>
+							{{#each actor.system.gimmick.system.wantOptions}}
+								<li>{{this}}</li>
+							{{/each}}
+						</ul>
+					</div>
+
+					<div class="cell">
+						<h4>{{localize "WWW.Sheet.HeatQuestions"}}</h4>
+						<ul>
+							{{#each actor.system.gimmick.system.heatQuestions}}
+								<li>{{this}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+
+			{{else}}
+				<p>{{localize "WWW.Gimmick.SelectOne"}}</p>
+			{{/if}}
 		</div>
-		<div class="cell cell--input">
-			<label for="generalLook">{{localize "WWW.Sheet.GeneralLook"}}</label>
-			<input type="text" name="system.generalLook" id="generalLook" value="{{actor.system.generalLook}}">
-		</div>
-		<div class="cell cell--input">
-			<label for="entrance">{{localize "WWW.Sheet.Entrance"}}</label>
-			<textarea name="system.entrance" id="entrance">{{actor.system.entrance}}</textarea>
-		</div>
+
 
 	</div>
 </form>

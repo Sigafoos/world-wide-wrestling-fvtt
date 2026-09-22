@@ -12,6 +12,13 @@
 			<textarea name="system.description" id="description">{{item.system.description}}</textarea>
 		</div>
 		<div class="cell cell--input">
+			<label for="stat">{{localize "WWW.Move.Roll"}}</label>
+			<select name="system.stat" id="stat">
+				{{selectOptions statChoices selected=item.system.stat localize=true}}
+			</select>
+		</div>
+
+		<div class="cell cell--input">
 			<label for="onSuccess">{{localize "WWW.Move.OnSuccess"}}</label>
 			<textarea name="system.onSuccess" id="onSuccess">{{item.system.onSuccess}}</textarea>
 		</div>

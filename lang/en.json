@@ -14,14 +14,17 @@
     "WWW.Stats.Look": "Look",
     "WWW.Stats.Real": "Real",
     "WWW.Stats.Work": "Work",
+    "WWW.Stats.Flat": "Flat",
 
-
+    "WWW.Move.Roll": "Roll",
     "WWW.Move.Header": "Move",
     "WWW.Move.OnSuccess": "On a 10+",
     "WWW.Move.OnMixed": "On a 7-9",
     "WWW.Move.OnBotch": "On a botch",
 
     "WWW.Gimmick.Header": "Gimmick",
+    "WWW.Gimmick.SelectOne": "None! Drag one from the compendium.",
+    "WWW.Gimmick.AudienceReset": "You start and reset to audience",
 
     "WWW.TKTKTK": "i hate trailing commas"
 }
