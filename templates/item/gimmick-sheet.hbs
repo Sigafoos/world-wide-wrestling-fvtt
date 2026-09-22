@@ -1,0 +1,45 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div class="sheet-wrapper">
+		<div class="sheet-header">
+			<div class="sheet-header__fields flexrow">
+				<label for="name">{{localize "WWW.Gimmick.Header"}}</label>
+				<input class="input--title" name="name" id="name" type="text" value="{{item.name}}" placeholder="Name"/>
+			</div>
+		</div>
+
+		<div class="cell cell--input">
+			<label for="description">{{localize "WWW.Generic.Description"}}</label>
+			<textarea name="system.description" id="description">{{item.system.description}}</textarea>
+		</div>
+		<div class="cell cell--input">
+			<label for="heatQuestions">{{localize "WWW.Sheet.HeatQuestions"}}</label>
+			<textarea name="system.heatQuestions" id="heatQuestions">{{heatQuestionsValue}}</textarea>
+		</div>
+		<div class="cell cell--input">
+			<label for="wantOptions">{{localize "WWW.Sheet.Wants"}}</label>
+			<textarea name="system.wantOptions" id="wantOptions">{{wantOptionsValue}}</textarea>
+		</div>
+
+		<fieldset>
+			<legend>{{localize "WWW.Sheet.Stats"}}</legend>
+			<div class="flexrow">
+				<div class="cell cell--input">
+					<label for="body">{{localize "WWW.Stats.Body"}}</label>
+					<input type="number" name="system.body" id="body" value="{{item.system.body}}">
+				</div>
+				<div class="cell cell--input">
+					<label for="look">{{localize "WWW.Stats.Look"}}</label>
+					<input type="number" name="system.look" id="look" value="{{item.system.look}}">
+				</div>
+				<div class="cell cell--input">
+					<label for="real">{{localize "WWW.Stats.Real"}}</label>
+					<input type="number" name="system.real" id="real" value="{{item.system.real}}">
+				</div>
+				<div class="cell cell--input">
+					<label for="work">{{localize "WWW.Stats.Work"}}</label>
+					<input type="number" name="system.work" id="work" value="{{item.system.work}}">
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</form>

@@ -23,11 +23,18 @@
     }],
     "documentTypes": {
         "Actor": {
-            "wrestler": {
-                "filePathFields": {
-                    "picture": ["IMAGE"]
-                }
-            }
+            "wrestler": {}
+        },
+        "Item": {
+            "move": {
+                "htmlFields": ["onSuccess", "onMixed", "onBotch"]
+            },
+            "gimmick": {}
+        }
+    },
+    "flags": {
+        "hotReload": {
+            "paths": ["templates", "lang"]
         }
     }
 }

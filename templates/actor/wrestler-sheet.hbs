@@ -1,0 +1,26 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div class="sheet-wrapper">
+		<div class="sheet-header">
+			<div class="sheet-header__fields flexrow">
+				<div class="cell cell--image">
+					<img class="profile-img" src="{{actor.img}}" data-edit="img" />
+				</div>
+				<input class="input--title" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+			</div>
+		</div>
+
+		<div class="cell cell--input">
+			<label for="hailingFrom">{{localize "WWW.Sheet.HailingFrom"}}</label>
+			<input type="text" name="system.hailingFrom" id="hailingFrom" value="{{actor.system.hailingFrom}}">
+		</div>
+		<div class="cell cell--input">
+			<label for="generalLook">{{localize "WWW.Sheet.GeneralLook"}}</label>
+			<input type="text" name="system.generalLook" id="generalLook" value="{{actor.system.generalLook}}">
+		</div>
+		<div class="cell cell--input">
+			<label for="entrance">{{localize "WWW.Sheet.Entrance"}}</label>
+			<textarea name="system.entrance" id="entrance">{{actor.system.entrance}}</textarea>
+		</div>
+
+	</div>
+</form>

@@ -1,1 +1,27 @@
-{}
+{
+    "WWW.Generic.Description": "Description",
+    "WWW.Generic.OnePerLine": "(one per line)",
+
+    "WWW.Sheet.Name": "Name",
+    "WWW.Sheet.GeneralLook": "General Look",
+    "WWW.Sheet.HailingFrom": "Hailing From",
+    "WWW.Sheet.Entrance": "Entrance",
+    "WWW.Sheet.Stats": "Stats",
+    "WWW.Sheet.Wants": "Wants",
+    "WWW.Sheet.HeatQuestions": "Heat Questions",
+
+    "WWW.Stats.Body": "Body",
+    "WWW.Stats.Look": "Look",
+    "WWW.Stats.Real": "Real",
+    "WWW.Stats.Work": "Work",
+
+
+    "WWW.Move.Header": "Move",
+    "WWW.Move.OnSuccess": "On a 10+",
+    "WWW.Move.OnMixed": "On a 7-9",
+    "WWW.Move.OnBotch": "On a botch",
+
+    "WWW.Gimmick.Header": "Gimmick",
+
+    "WWW.TKTKTK": "i hate trailing commas"
+}
