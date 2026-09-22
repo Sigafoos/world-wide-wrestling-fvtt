@@ -6,7 +6,7 @@ export class MoveData extends foundry.abstract.TypeDataModel {
 				required: true,
 				blank: false,
 				initial: "flat",
-				choices: ["body", "look", "real", "work", "flat"]
+				choices: ["body", "look", "real", "work", "audience", "flat"]
 			}),
 			onSuccess: new foundry.data.fields.HTMLField({ required: true }),
 			onMixed: new foundry.data.fields.HTMLField({ required: true }),

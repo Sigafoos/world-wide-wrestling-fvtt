@@ -35,11 +35,11 @@ Hooks.once("init", () => {
 Hooks.on("preCreateItem", (item, data, options, userId) => {
 	if (item.type !== "gimmick")
 		return;
-	const parent = item.parent;
-	if (!parent)
+	const wrestler = item.parent;
+	if (!wrestler)
 		return;
 
-	const existingGimmick = parent.items.find(i => i.type === "gimmick");
+	const existingGimmick = wrestler.items.find(i => i.type === "gimmick");
 	if (existingGimmick)
 	{
 		existingGimmick.delete(); // get rid of the old one

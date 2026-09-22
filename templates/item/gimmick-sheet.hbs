@@ -41,5 +41,40 @@
 				</div>
 			</div>
 		</fieldset>
+
+		<div class="cell cell--input drop-zone" data-single="finisher">
+			<p>{{localize "WWW.Gimmick.Finisher"}}:
+			{{#if finisher}}
+				{{finisher.name}}
+			{{else}}
+				{{localize "WWW.Generic.None"}}
+			{{/if}}
+			</p>
+		</div>
+
+		<div class="flexrow">
+			<div class="cell drop-zone" data-list="moves">
+				<h2>{{localize "WWW.Gimmick.Moves"}}</h2>
+				<ul>
+					{{#each moves}}
+						<li>{{this.name}}</li>
+					{{/each}}
+				</ul>
+			</div>
+
+			<div class="cell drop-zone" data-list="movePicks">
+				<h2>{{localize "WWW.Gimmick.PickCount"}}</h2>
+				<div>
+					<label for="movePickCount">{{localize "WWW.Gimmick.AndPick"}}</label>
+					<input type="number" name="system.movePickCount" id="movePickCount" value="{{item.system.movePickCount}}">
+				</div>
+				<ul>
+					{{#each movePicks}}
+						<li>{{this.name}}</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+
 	</div>
 </form>

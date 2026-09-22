@@ -1,6 +1,7 @@
 {
     "WWW.Generic.Description": "Description",
     "WWW.Generic.OnePerLine": "(one per line)",
+    "WWW.Generic.None": "None",
 
     "WWW.Sheet.Name": "Name",
     "WWW.Sheet.GeneralLook": "General Look",
@@ -14,6 +15,7 @@
     "WWW.Stats.Look": "Look",
     "WWW.Stats.Real": "Real",
     "WWW.Stats.Work": "Work",
+    "WWW.Stats.Audience": "Audience",
     "WWW.Stats.Flat": "Flat",
 
     "WWW.Move.Roll": "Roll",
@@ -23,8 +25,15 @@
     "WWW.Move.OnBotch": "On a botch",
 
     "WWW.Gimmick.Header": "Gimmick",
-    "WWW.Gimmick.SelectOne": "None! Drag one from the compendium.",
+    "WWW.Gimmick.Finisher": "Finisher",
+    "WWW.Gimmick.Moves": "Moves",
+    "WWW.Gimmick.PickCount": "Extra moves to pick",
+    "WWW.Gimmick.AndPick": "And pick",
+    "WWW.Gimmick.SelectOne": "No gimmick selected! Drag one from the compendium.",
     "WWW.Gimmick.AudienceReset": "You start and reset to audience",
+
+    "WWW.Tabs.Moves": "Moves",
+    "WWW.Tabs.Gimmick": "Gimmick",
 
     "WWW.TKTKTK": "i hate trailing commas"
 }

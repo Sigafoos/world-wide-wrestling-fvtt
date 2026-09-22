@@ -9,6 +9,10 @@ export class GimmickData extends foundry.abstract.TypeDataModel {
 			look: new foundry.data.fields.NumberField({ required: true }),
 			real: new foundry.data.fields.NumberField({ required: true }),
 			work: new foundry.data.fields.NumberField({ required: true }),
+			finisher: new foundry.data.fields.DocumentUUIDField(),
+			moves: new foundry.data.fields.ArrayField(new foundry.data.fields.DocumentUUIDField()),
+			movePickCount:  new foundry.data.fields.NumberField({ required: true }),
+			movePicks: new foundry.data.fields.ArrayField(new foundry.data.fields.DocumentUUIDField())
 		};
 	}
 }

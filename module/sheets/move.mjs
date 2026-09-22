@@ -20,6 +20,7 @@ export class MoveSheet extends foundry.appv1.sheets.ItemSheet {
 			look: "WWW.Stats.Look",
 			real: "WWW.Stats.Real",
 			work: "WWW.Stats.Work",
+			audience: "WWW.Stats.Audience",
 			flat: "WWW.Stats.Flat"
 		};
 		return context;

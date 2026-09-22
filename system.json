@@ -15,7 +15,11 @@
     }],
     "esmodules": ["www-2e.mjs"],
     "styles": [],
-    "packs": [],
+    "packs": [
+          { "name": "basicMoves", "label": "Basic Moves", "path": "packs/basicMoves", "type": "Item", "system": "world-wide-wrestling-2e" },
+          { "name": "moves", "label": "Moves", "path": "packs/moves", "type": "Item", "system": "world-wide-wrestling-2e" },
+          { "name": "gimmicks", "label": "Gimmicks", "path": "packs/gimmicks", "type": "Item", "system": "world-wide-wrestling-2e" }
+    ],
     "languages": [{
         "lang": "en",
         "name": "English",

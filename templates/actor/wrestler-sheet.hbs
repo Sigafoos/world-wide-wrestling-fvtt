@@ -45,37 +45,48 @@
 			</div>
 		</fieldset>
 
-		<div>
-			<h2>{{localize "WWW.Gimmick.Header"}}</h2>
-			{{#if actor.system.gimmick}}
-				<h3>{{actor.system.gimmick.name}}</h3>
+		{{#if actor.system.gimmick}}
+			<nav class="sheet-tabs tabs" data-group="primary">
+				<a class="item" data-tab="moves">{{localize "WWW.Tabs.Moves"}}</a>
+				<a class="item" data-tab="gimmick">{{localize "WWW.Tabs.Gimmick"}}</a>
+			</nav>
 
-				<p>{{actor.system.gimmick.system.description}}</p>
+			<div class="tab-body">
+				<div class="tab" data-group="primary" data-tab="moves">
+					moves tktk
+				</div>
 
-				<div class="flexrow">
-					<div class="cell">
-						<h4>{{localize "WWW.Sheet.Wants"}}</h4>
-						<ul>
-							{{#each actor.system.gimmick.system.wantOptions}}
-								<li>{{this}}</li>
-							{{/each}}
-						</ul>
-					</div>
+				<div class="tab" data-group="primary" data-tab="gimmick">
+					<h2>{{localize "WWW.Gimmick.Header"}}</h2>
+					<h3>{{actor.system.gimmick.name}}</h3>
 
-					<div class="cell">
-						<h4>{{localize "WWW.Sheet.HeatQuestions"}}</h4>
-						<ul>
-							{{#each actor.system.gimmick.system.heatQuestions}}
-								<li>{{this}}</li>
-							{{/each}}
-						</ul>
+					<p>{{actor.system.gimmick.system.description}}</p>
+
+					<div class="flexrow">
+						<div class="cell">
+							<h4>{{localize "WWW.Sheet.Wants"}}</h4>
+							<ul>
+								{{#each actor.system.gimmick.system.wantOptions}}
+									<li>{{this}}</li>
+								{{/each}}
+							</ul>
+						</div>
+
+						<div class="cell">
+							<h4>{{localize "WWW.Sheet.HeatQuestions"}}</h4>
+							<ul>
+								{{#each actor.system.gimmick.system.heatQuestions}}
+									<li>{{this}}</li>
+								{{/each}}
+							</ul>
+						</div>
 					</div>
 				</div>
 
 			{{else}}
-				<p>{{localize "WWW.Gimmick.SelectOne"}}</p>
+				<p><b>{{localize "WWW.Gimmick.SelectOne"}}</b></p>
 			{{/if}}
-		</div>
+			</div>
 
 
 	</div>
