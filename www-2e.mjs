@@ -42,12 +42,15 @@ Hooks.once("init", () => {
 
 	// global delete
 	document.addEventListener("click", async ev => {
+		/*
 		// I don't LOVE closest? but I guess it's fine...
 		const target = ev.target.closest("[data-delete-uuid]");
 		if (!target)
 			return;
 		const doc = await fromUuid(target.dataset.deleteUuid);
 		await doc?.delete()
+		*/
+		console.warn('I took this out because it was kinda breaking things. brb.');
 	});
 });
 
