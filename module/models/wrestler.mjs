@@ -21,6 +21,17 @@ export class WrestlerData extends foundry.abstract.TypeDataModel {
 
 	prepareDerivedData() {
 		this._gimmick = this.parent?.items.find(i => i.type === "gimmick") ?? null;
+		const rawMoves = this.parent?.items.filter(i => i.type === "move") ?? [];
+		this._finisher = rawMoves.find(m => m.getFlag("world-wide-wrestling-2e", "isFinisher")) ?? null;
+		this._moves = rawMoves.filter(m => m !== this._finisher);
+	}
+
+	get finisher() {
+		return this._finisher;
+	}
+
+	get moves() {
+		return this._moves;
 	}
 
 	get gimmick() {

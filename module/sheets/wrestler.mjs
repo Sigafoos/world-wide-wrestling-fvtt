@@ -14,6 +14,14 @@ export class WrestlerSheet extends foundry.appv1.sheets.ActorSheet {
 		return `systems/${game.system.id}/templates/actor/wrestler-sheet.hbs`;
 	}
 
+	activateListeners(html) {
+		super.activateListeners(html);
+		html.find(".rollable-move i").click(ev => {
+			const itemId = ev.currentTarget.dataset.itemId;
+			this.actor.items.get(itemId)?.roll();
+		});
+	}
+
 	async getData(options) {
 		const context = await super.getData(options);
 

@@ -10,19 +10,19 @@ export class MoveItem extends Item {
 		let formula, statValue;
 		if (statKey === "flat") {
 			formula = "2d6";
-			value = 0;
+			statValue = 0;
 		} else {
 			formula = "2d6 + @stat";
-			value = wrestler?.system[statKey] ?? 0;
+			statValue = wrestler?.system[statKey] ?? 0;
 		}
 
 		const roll = new Roll(formula, { stat: statValue });
 		await roll.evaluate();
 
 		let result;
-		if (roll.result >= 10) {
+		if (roll.total >= 10) {
 			result = "onSuccess";
-		} else if (roll.result >= 7) {
+		} else if (roll.total >= 7) {
 			result = "onMixed";
 		} else {
 			result = "onBotch";

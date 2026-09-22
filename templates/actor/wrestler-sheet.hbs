@@ -53,7 +53,13 @@
 
 			<div class="tab-body">
 				<div class="tab" data-group="primary" data-tab="moves">
-					moves tktk
+					<h2>{{localize "WWW.Gimmick.Moves"}}</h2>
+					<p>{{localize "WWW.Gimmick.AndPick"}}: {{actor.system.gimmick.system.movePickCount}}</p>
+					<ul>
+					{{#each actor.system.moves}}
+						<li class="rollable-move">{{this.name}} <a><i data-item-id="{{this.id}}" class="fas fa-dice"></i></a></li>
+					{{/each}}
+					</ul>
 				</div>
 
 				<div class="tab" data-group="primary" data-tab="gimmick">

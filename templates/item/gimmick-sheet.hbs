@@ -57,7 +57,7 @@
 				<h2>{{localize "WWW.Gimmick.Moves"}}</h2>
 				<ul>
 					{{#each moves}}
-						<li>{{this.name}}</li>
+						<li draggable="true" data-drag-uuid="{{this.uuid}}">{{this.name}} <a class="delete-move" data-delete-uuid="{{this.uuid}}"><i class="fas fa-trash"></i></li>
 					{{/each}}
 				</ul>
 			</div>
@@ -70,7 +70,7 @@
 				</div>
 				<ul>
 					{{#each movePicks}}
-						<li>{{this.name}}</li>
+						<li draggable="true" data-drag-uuid="{{this.uuid}}">{{this.name}} <a class="delete-move" data-delete-uuid="{{this.uuid}}"><i class="fas fa-trash"></i></li>
 					{{/each}}
 				</ul>
 			</div>
